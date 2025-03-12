@@ -16,9 +16,3 @@ body {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
-/* ɾ����ע�͵� backdrop-filter ��ش��� */
-.board, #toc {
-    background-color: rgba(255, 255, 255, 0.3) !important; /* ֱ��ʹ�ð�͸��ɫ */
-    -webkit-backdrop-filter: none; /* �ؼ�������ģ���˾� */
-    backdrop-filter: none;
-}
