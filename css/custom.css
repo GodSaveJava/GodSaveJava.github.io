@@ -4,10 +4,9 @@ body {
     min-height: 100vh; /* ȷ�� body �߶ȳ����ӿ� */
 }
 #board {
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
-
 #toc {
     padding: 10px;
     top: 4rem;
