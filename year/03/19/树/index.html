@@ -35,8 +35,20 @@
 <meta property="og:image" content="http://example.com/img/Tree/7.jpg">
 <meta property="og:image" content="http://example.com/img/Tree/8.jpg">
 <meta property="og:image" content="http://example.com/img/Tree/9.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/10.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/11.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/12.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/13.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/14.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/15.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/16.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/16.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/17.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/18.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/19.jpg">
+<meta property="og:image" content="http://example.com/img/Tree/20.jpg">
 <meta property="article:published_time" content="2025-03-19T09:59:07.000Z">
-<meta property="article:modified_time" content="2025-03-28T11:44:10.846Z">
+<meta property="article:modified_time" content="2025-04-15T08:22:59.411Z">
 <meta property="article:author" content="Magic_Cat">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/Tree/1.jpg">
@@ -249,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          5.7k 字
         
       </span>
     
@@ -260,7 +272,7 @@
         
         
         
-          27 分钟
+          48 分钟
         
       </span>
     
@@ -338,8 +350,32 @@
 <blockquote>
 <p>相较于AVL树的高度平衡，红黑树的平衡条件由”左右子树高度差的绝对值不超过1”变为了左右子树的高度差不超过两倍”，由此便可以减少增删时的操纵频率。但查找性能相比AVL树会略微低些(因为影响查找效率的树高相比于AVL树还是稍微高了些)，因此实际应用中如果是增删操作较少，查找操作为主的话采用AVL树最为合适。但其实红黑树的应用会更为广泛，如C++中的map和set就是用红黑树实现的。</p>
 </blockquote>
-<h2 id="红黑树的插入"><a href="#红黑树的插入" class="headerlink" title="红黑树的插入"></a>红黑树的插入</h2><p><br>&ensp;&ensp;红黑树的插入和二叉排序树的插入基本类似，不同之处在于，红黑树的插入需要对新插入的节点进行节点染色，以及对染色后的二叉树进行调整以符合红黑树的性质的操作。<br><br>&ensp;&ensp;新插入的节点初始为红色，此时便会面临以下几种情况:(设新插入节点为z)<br><br>&ensp;&ensp;&ensp;&ensp;① 若z的父节点为黑色，无需调整，这便是一颗标准的红黑树<br><br>&ensp;&ensp;&ensp;&ensp;② 若z为根节点，则将z染为黑色<br><br>&ensp;&ensp;&ensp;&ensp;③ 若z的父节点为红色，则此时看z的叔节点(z的父节点的兄弟节点):<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;1) z的叔节点是黑色的，z的父节点是(z的父节点的父节点的)左(<strong>L</strong>)孩子，且z是(z的父节点的)右(<strong>R</strong>)孩子，则属于LR，需要先左旋后右旋，z先左上旋转和其父节点交换位置，随后又右上旋转到其(原)父节点的父节点(或者说爷节点)的位置。使得z原本的父节点成为z的左孩子，z原本的爷节点成为z的右孩子。<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2) z的叔节点是黑色的，z的父节点是左(<strong>L</strong>)孩子，且z是左(<strong>L</strong>)孩子，则为LL，需要进行两次右旋，先是交换z和父节点的位置，后z再和(原)爷节点交换位置，爷节点成为z的右孩子。并且交换z(原)父节点和z(原)爷节点的颜色，使其符合红黑树的性质。</p>
-<p><img src="/img/Tree/9.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入1" title="红黑树的插入1"></p>
+<h2 id="红黑树的插入"><a href="#红黑树的插入" class="headerlink" title="红黑树的插入"></a>红黑树的插入</h2><p><br>&ensp;&ensp;红黑树的插入和二叉排序树的插入基本类似，不同之处在于，红黑树的插入需要对新插入的节点进行节点染色，以及对染色后的二叉树进行调整以符合红黑树的性质的操作。<br><br>&ensp;&ensp;新插入的节点初始为红色，此时便会面临以下几种情况:(设新插入节点为z)<br><br>&ensp;&ensp;&ensp;&ensp;① 若z的父节点为黑色，无需调整，这便是一颗标准的红黑树<br><br>&ensp;&ensp;&ensp;&ensp;② 若z为根节点，则将z染为黑色<br><br>&ensp;&ensp;&ensp;&ensp;③ 若z的父节点为红色，则此时看z的叔节点(z的父节点的兄弟节点):<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;1) z的叔节点是黑色的，z的父节点是(z的父节点的父节点的)左(<strong>L</strong>)孩子，且z是(z的父节点的)右(<strong>R</strong>)孩子，则属于LR，需要先左旋后右旋，z先左上旋转和其父节点交换位置，随后又右上旋转到其(原)父节点的父节点(或者说爷节点)的位置。使得z原本的父节点成为z的左孩子，z原本的爷节点成为z的右孩子。<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2) z的叔节点是黑色的，z的父节点是左(<strong>L</strong>)孩子，<br>且z是左(<strong>L</strong>)孩子，则为LL，需要进行两次右旋，先是交换z和父节点的位置，后z再和(原)爷节点交换位置，爷节点成为z的右孩子。并且交换z(原)父节点和z(原)爷节点的颜色，使其符合红黑树的性质。<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;若z的父节点是右孩子，则还有RL(右旋再左旋)和RR(左单旋)两种情况，则与上面的操作类似，便不再赘述。<br><img src="/img/Tree/9.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入1" title="红黑树的插入1"></p>
+<p><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;3) z的叔节点是红色的，此时z无论是左孩子还是右孩子都不影响了。因为爷节点是黑色的，所以要将父节点和叔节点都染为黑色，并将爷节点着为红色，以保持局部性质④和⑤。然后把爷节点作为新节点z重复循环，对爷节点的叔节点和父节点以及爷节点进行调整，直至调整完毕。</p>
+<p><img src="/img/Tree/10.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入2" title="红黑树的插入2"></p>
+<p><br>&ensp;&ensp;&ensp;下面是一个红黑树插入的案例(虚线表示插入后未调整的状态):</p>
+<p><br>&ensp;&ensp;&ensp;插入节点5:<br><img src="/img/Tree/11.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入" title="红黑树的插入"></p>
+<p><br>&ensp;&ensp;&ensp;节点5和其父节点3均为红色，并且5的叔节10也为红色，此时为情况③中的3)，需要将父节点和叔节点着为黑色，并将爷节点着色为红色。<br><img src="/img/Tree/12.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入" title="红黑树的插入"></p>
+<p><br>&ensp;&ensp;&ensp;由于爷节点7为根节点，根据性质②,需要将根节点7染为黑色。此时调整结束<br><img src="/img/Tree/13.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入" title="红黑树的插入"></p>
+<p><br>&ensp;&ensp;&ensp;插入节点4，由于其父节点为红色，且叔节点(3的外部节点，外部节点默认黑色)为黑色，而4又是5的左孩子，因此是情况③中的1),也就是RL，那么此时需要先右旋再左旋，将4上升到原爷节点的位置。在上升的途中，4右旋至原父节点5的位置后，此时4和5均为红色，为情况③.2)的RR，因此需要交换3和4的颜色，再对3进行左旋，最后结束调整。<br><img src="/img/Tree/14.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入" title="红黑树的插入"></p>
+<p><img src="/img/Tree/15.jpg" srcset="/img/loading.gif" lazyload alt="红黑树的插入" title="红黑树的插入"></p>
+<p><br>&ensp;&ensp;&ensp;插入12，由于其父节点为黑色，无需任何调整，结束。</p>
+<h1 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h1><h2 id="定义及特性"><a href="#定义及特性" class="headerlink" title="定义及特性"></a>定义及特性</h2><p><br>&ensp;&ensp;B树是一种平衡因子均为0的绝对平衡树，也就是说是它对于平衡性的严格程度更甚于AVL树。<br><br>&ensp;&ensp;我们一般说一颗B树，都是称其为m阶B树，这里的m指的是一个节点最多可以有m个子树(因此B树不一定是二叉树)。而且较为特殊的是，B树中的一个节点可以有多个关键字。<br><br>&ensp;&ensp;下面是一颗5阶B树的示例:<br><img src="/img/Tree/16.jpg" srcset="/img/loading.gif" lazyload alt="B树的尊容" title="B树的尊容"></p>
+<p><br>&ensp;&ensp;一颗m阶子树必须满足以下特性:<br><br>&ensp;&ensp;&ensp;&ensp;①&ensp;每个节点至多只能有m个子树，并且最多只能包含m-1个关键字。<br><br>&ensp;&ensp;&ensp;&ensp;②&ensp;若根节点不是叶节点，那么根节点至少有两颗子树，即至少有一个关键字。<br><br>&ensp;&ensp;&ensp;&ensp;③&ensp;所有非根节点都至少有[m&#x2F;2]颗子树，即至少有[m&#x2F;2]-1个关键字。<strong>若m为奇数则向上取整，比如上面的示例中每个非根节点至少有[5&#x2F;2]&#x3D;3颗子树</strong><br><br>&ensp;&ensp;&ensp;&ensp;④&ensp;所有非叶节点的结构为:| p | K1 | p | K2 |….其中p为指向孩子节点的指针，K为当前节点内的元素。<br><br>&ensp;&ensp;&ensp;&ensp;⑤&ensp;所有的叶节点都在同一层(理所应当的，因为B树是一颗绝对平衡的树)，并且都是外部节点(不带信息)，实际上这些外部节点并不存在，指向这些节点的指针为空。<br><br>&ensp;&ensp;<em><strong>注意!在实际应用中有的人习惯将叶节点视为内部节点中最底层的节点(即因指针指向为空查找失败的节点，也称作失败节点)，而有的人会将叶节点定义为外部节点(也成为终端节点)</strong></em><br><br>&ensp;&ensp;&ensp;&ensp;⑥&ensp;节点中的关键字是有序的，并且父节点和子节点之间也是有序的。(例如示例中的节点5,1均小于父节点22，节点6,8,9均大于节点5,11中的5并均小于11，因此其箭头从5和11的中间位置出发。)</p>
+<p><br>&ensp;&ensp;B树的结构有点像是区间的概念，子节点中的值均位于父节点中某两个值的区间内(所以箭头也是从两个树中间延伸出来),或者是均大于或小于某个边界值。在示例中:节点中一个元素的左指针所指的节点均小于该元素的值，右指针所指的节点均大于该元素的值。<br><br>&ensp;&ensp;因此B树也是一种特殊的排序树，满足左＜中＜右的特性。</p>
+<h2 id="B树的查找"><a href="#B树的查找" class="headerlink" title="B树的查找"></a>B树的查找</h2><p><br>&ensp;&ensp;B树的查找和二叉排序树很相似，不同的是B树每个节点都包含了可能不止一个的关键字，并且每个节点不只有两个分支，也可能会有多个分支。<br><br>&ensp;&ensp;B树的查找包含两个基本操作:①在B树中寻找节点；②在节点中寻找关键字或是关键字所处的区间。<br><br>&ensp;&ensp;B树查找的基本逻辑是:查找该节点中的有序表，若有查找到相应的元素则查找成功，若是没找到则根据其值在该节点所在的区间内(即指针所指的节点)进行查找。<br><br>&ensp;&ensp;例如，在上面的例子中，我们要查找关键字42，首先从根节点开始，44&gt;22，因此若是存在44的话，一定是位于节点22的右子树中，因此查找右子树，右子树中有三个关键字，而36&lt;42&lt;45，若是节点44存在的话则是位于36和45的区间内，即36和45之间指针所指的节点内，因此查找其指针所指节点，在该节点中查找到关键字42，因此查找成功。若是查找到叶节点(外部节点,指针为空)，则为查找失败，没有对应的关键字。<br><img src="/img/Tree/16.jpg" srcset="/img/loading.gif" lazyload alt="B树的尊容" title="B树的尊容"></p>
+<h2 id="B树的插入"><a href="#B树的插入" class="headerlink" title="B树的插入"></a>B树的插入</h2><p><br>&ensp;&ensp;B树的插入类似于二叉排序树的插入，但是需要注意的是，一颗m阶B树中的所有节点最多包含m-1个关键字，而插入新的关键字可能会导致该节点的关键字数量溢出，因此当节点插入新的关键字时，需要检查插入后的状态是否符合B树对于节点关键字数量的性质，若是破坏了该性质则需要进行调整。</p>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p><br>&ensp;&ensp;在B树中插入新元素首先要做的是找到相对应的节点。根据B树的性质找到关键字所处的区间，并逐层的往下缩小区间(因此新元素的插入都是位于B树最底层的非叶节点)，直至找到最小区间，或是查找失败(指向外部节点)。</p>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p><br>&ensp;&ensp;找到对应的位置后便可在该节点处进行插入，插入后还需对节点内部元素进行一次排序(一般排序的算法是选择排序或是直接排序)。若是插入的数据导致节点内部元素数量溢出的，就需要对节点元素进行优化。</p>
+<h3 id="分裂"><a href="#分裂" class="headerlink" title="分裂"></a>分裂</h3><p><br>&ensp;&ensp;若该节点内部元素数量大于m-1，则需要对该节点进行分裂处理。<br><br>&ensp;&ensp;首先将该节点(假设有m个元素)中的第[m&#x2F;2]个元素右边的所有元素放入一个新节点A中<br><br>&ensp;&ensp;再将第[m&#x2F;2]个元素移至其父节点中。并将其右区间指向新节点A。<br><br>&ensp;&ensp;若是移动至父节点后导致其父节点的元素数量溢出，则重复上述步骤。</p>
+<p><img src="/img/Tree/17.jpg" srcset="/img/loading.gif" lazyload alt="B树的插入" title="B树的插入"></p>
+<h2 id="B树的删除"><a href="#B树的删除" class="headerlink" title="B树的删除"></a>B树的删除</h2><p><br>&ensp;&ensp;B树的删除和插入类似，也需要经历定位、修改、调整的操作。在删除某个节点后，若其节点中元素的数量小于[m&#x2F;2]-1，即不满足B树的性质，则需要进行合并的操作.</p>
+<h2 id="定位-1"><a href="#定位-1" class="headerlink" title="定位"></a>定位</h2><p><br>&ensp;&ensp;与插入相同，不再赘述。</p>
+<h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><p><br>&ensp;&ensp;节点的删除右三种情况:<br><br>&ensp;&ensp;&ensp;&ensp;① 直接删除关键字。若节点删除数据后元素的数量≥[m&#x2F;2]，则表明删除后仍符合B树定义，无需做出任何改变。<br><br>&ensp;&ensp;&ensp;&ensp;② 若删除数据后元素的节元素数量&lt;[m&#x2F;2]-1，则违反B树的性质。那么此时便需要向兄弟(左右都可)节点”借”一位关键字。<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;1) 若兄弟节点够借，即兄弟节点关键字个数≥[m&#x2F;2]，则借出节点后不会违反B树的性质。因此可以像兄弟节点借用一个关键字。从兄弟节点中借用一个最接近被删除节点的关键字A(左兄弟节点的话就是最右边的关键字，右兄弟节点的话就是最左边的关键字)，将父节点中最接近被删除节点的元素移至被删除节点中，并将关键字A代替至父节点中移动的那个元素的位置。<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2) 若兄弟节点不够借，即兄弟节点关键字个数&#x3D;[m&#x2F;2]-1,则借出节点的话会违反B树的性质，因此需要在关键字删除后与左(或右)兄弟节点以及双亲节点中的关键字进行合并。</p>
+<p><img src="/img/Tree/18.jpg" srcset="/img/loading.gif" lazyload alt="直接删除关键字" title="直接删除关键字"></p>
+<p><img src="/img/Tree/19.jpg" srcset="/img/loading.gif" lazyload alt="向兄弟节点借" title="向兄弟节点借"></p>
+<h2 id="扩展-B-树"><a href="#扩展-B-树" class="headerlink" title="(扩展)B+树"></a>(扩展)B+树</h2><p><br>&ensp;&ensp;B+树多用于数据库的存储架构。与B树不同的是，从结构上来看，B树的子节点对应的是父节点中元素的区间，而B+树则对应的是父节点的元素。也就是说，B树一个有m个元素的节点最多可以有m+1个子树，而B+树的话m个元素的节点只有m个子树。<br><br>&ensp;&ensp;B+树的所有叶节点包含全部关键字(也就是说非叶节点的元素最终也会出现在叶节点上)以及指向相应记录的指针，叶节点中的关键字按大小顺序排序。<br><br>&ensp;&ensp;非叶节点仅起到索引作用，不含有对应记录的存储地址，这样可以使得一块磁盘能够存储更多的关键字，查找速度更快。</p>
+<p><img src="/img/Tree/20.jpg" srcset="/img/loading.gif" lazyload alt="B+树" title="B+树"></p>
 
                 
               </div>
