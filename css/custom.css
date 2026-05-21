@@ -257,7 +257,7 @@ body {
 }
 
 .markdown-body {
-  color: rgba(37, 37, 37, 0.82);
+  color: rgba(37, 37, 37, 0.88);
   line-height: 1.85;
   font-size: 1.02rem;
 }
@@ -269,6 +269,7 @@ body {
 .markdown-body dd,
 .markdown-body dt {
   font-weight: 400;
+  color: rgba(37, 37, 37, 0.88);
 }
 
 .markdown-body h1,
@@ -415,7 +416,7 @@ body {
 .markdown-body,
 .markdown-body p,
 .markdown-body li {
-  color: rgba(37, 37, 37, 0.74);
+  color: rgba(37, 37, 37, 0.86);
 }
 
 .index-btm {
