@@ -9,6 +9,43 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.about-name,
+.banner .h2,
+.list-group-item-title,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 body {
   min-height: 100vh;
   background:
@@ -39,17 +76,24 @@ body {
   color: rgba(37, 37, 37, 0.72) !important;
 }
 
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-item,
+.navbar .iconfont {
+  font-weight: 500;
+}
+
 .banner {
   position: relative;
   overflow: hidden;
   min-height: 54vh;
-  background: transparent !important;
-}
-
-.banner .mask {
   background:
     radial-gradient(circle at top left, rgba(217, 200, 160, 0.08), transparent 34%),
     linear-gradient(180deg, rgba(247, 244, 238, 0.92), rgba(247, 244, 238, 0.96)) !important;
+}
+
+.banner .mask {
+  background: transparent !important;
 }
 
 .banner-text {
@@ -60,11 +104,14 @@ body {
 }
 
 .banner .h2 {
-  font-family: "Noto Serif JP", "Yu Mincho", serif;
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.12;
   letter-spacing: 0.01em;
   color: var(--ink);
+}
+
+.banner .h2 #subtitle {
+  font-weight: 600;
 }
 
 .banner .post-meta {
@@ -81,6 +128,11 @@ body {
 
 .scroll-down-bar {
   color: rgba(37, 37, 37, 0.58);
+}
+
+.header-inner {
+  height: auto !important;
+  min-height: 54vh;
 }
 
 #board {
@@ -104,6 +156,11 @@ body {
   max-width: 72ch;
   margin: 0 auto;
   padding: 2rem 1.25rem 0;
+}
+
+#board-ctn,
+.nopadding-x-md > .container > .row > .col-12.col-md-10.m-auto {
+  width: 100%;
 }
 
 #seo-header {
@@ -142,7 +199,6 @@ body {
 }
 
 .about-name {
-  font-family: "Noto Serif JP", "Yu Mincho", serif;
   font-size: 1.8rem;
   line-height: 1.2;
   color: var(--ink);
@@ -206,6 +262,15 @@ body {
   font-size: 1.02rem;
 }
 
+.markdown-body p,
+.markdown-body li,
+.markdown-body td,
+.markdown-body th,
+.markdown-body dd,
+.markdown-body dt {
+  font-weight: 400;
+}
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
@@ -263,6 +328,16 @@ body {
   overflow: hidden;
   border: 1px solid rgba(37, 37, 37, 0.08);
   border-radius: 0.9rem;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body pre code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.markdown-body pre {
+  line-height: 1.6;
 }
 
 .markdown-body th,
@@ -407,6 +482,20 @@ body {
 .license-box {
   border: 1px solid rgba(37, 37, 37, 0.08);
   border-radius: 1rem;
+}
+
+.license-title,
+.license-meta-item div:first-child,
+.post-prev a,
+.post-next a {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
+}
+
+.license-title > div:first-child,
+.post-prev a,
+.post-next a {
+  color: var(--ink);
+  font-weight: 500;
 }
 
 #scroll-top-button {
