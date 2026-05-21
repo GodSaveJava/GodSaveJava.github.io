@@ -14,7 +14,7 @@ button,
 input,
 textarea,
 select {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
+  font-family: "Noto Sans SC", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +41,7 @@ h6,
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -360,7 +360,7 @@ body {
 }
 
 .list-group-item-title {
-  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
   color: var(--ink);
 }
 
@@ -489,7 +489,7 @@ body {
 .license-meta-item div:first-child,
 .post-prev a,
 .post-next a {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
+  font-family: "Noto Sans SC", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
 }
 
 .license-title > div:first-child,
